@@ -43,6 +43,7 @@ if err := h.Validate([]byte("authStr"), []byte("password")); err != nil {
 
 ```go
 h := NewCachingSHA2()
+
 authStr, err := h.Encrypt([]byte("password"), []byte("$A$005$<20 bytes salt>"))
 if err != nil {
   // handle error
