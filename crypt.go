@@ -2,6 +2,10 @@ package mysql_password
 
 import "crypto/sha256"
 
+// Implement linux crypt function partially:
+// https://akkadia.org/drepper/SHA-crypt.txt.
+//
+// Equal to 'mysql-server/my_crypt_genhash function in mysys/crypt_genhash_impl.cc'.
 func cryptSHA256(password, salt []byte, rounds int) []byte {
 	h := sha256.New()
 
