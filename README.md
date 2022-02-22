@@ -3,13 +3,19 @@
 - Generate `authentication_string` of `mysql.user` table.
 - Validate password by `authentication_string`.
 
+## Install
+
+```shell
+go get github.com/vczyh/mysql-protocol
+```
+
 Supported  authentication methods:
 
 - [mysql_native_password](#mysql_native_password)
 - [sha256_password](#sha256_password)
 - [caching_sha2_password](#caching_sha2_password)
 
-## mysql_native_password
+## `mysql_native_password`
 
 ```go
 h := NewMySQLNative()
@@ -24,7 +30,7 @@ if err := h.Validate([]byte("authStr"), []byte("password")); err != nil {
 }
 ```
 
-## sha256_password
+## `sha256_password`
 
 ```go
 h := NewSHA256()
@@ -39,7 +45,7 @@ if err := h.Validate([]byte("authStr"), []byte("password")); err != nil {
 }
 ```
 
-## caching_sha2_password
+## `caching_sha2_password`
 
 ```go
 h := NewCachingSHA2()
