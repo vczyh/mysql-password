@@ -1,1 +1,1 @@
-module "mysql-password"
+module "github.com/vczyh/mysql-password"

@@ -1,4 +1,4 @@
-package mysql_password
+package mysqlpassword
 
 type Cipher interface {
 	// Validate compares authentication_string of mysql.user table

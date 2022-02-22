@@ -1,4 +1,4 @@
-package mysql_password
+package mysqlpassword
 
 import (
 	"bytes"
