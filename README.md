@@ -3,17 +3,17 @@
 - Generate `authentication_string` of `mysql.user` table.
 - Validate password by `authentication_string`.
 
-## Install
-
-```shell
-go get github.com/vczyh/mysql-password
-```
-
 Supported  authentication methods:
 
 - [mysql_native_password](#mysql_native_password)
 - [sha256_password](#sha256_password)
 - [caching_sha2_password](#caching_sha2_password)
+
+## Install
+
+```shell
+go get github.com/vczyh/mysql-password
+```
 
 ## `mysql_native_password`
 
